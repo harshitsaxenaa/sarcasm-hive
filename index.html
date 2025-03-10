@@ -2,21 +2,30 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Post Your Sarcasm Detection Results to Hive</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sarcasm Detection Results</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <h2>Post Your Sarcasm Detection Results to Hive</h2>
+  <div class="container">
+    <h1>🧠 Sarcasm Detection Result Uploader</h1>
+    <p>This tool loads the AI-generated sarcasm summary and posts it to the Hive blockchain via Keychain.</p>
 
-  <label for="username">Enter your Hive username:</label>
-  <input type="text" id="username" placeholder="e.g., harshit-saxena-1" />
+    <div class="button-group">
+      <button onclick="loadSummary()">📂 Load Summary</button>
+      <button onclick="postToHive()">🚀 Post to Hive</button>
+    </div>
 
-  <br><br>
-  <button id="loadSummaryBtn">Load Summary</button>
-  <button id="postToHiveBtn">Post to Hive via Keychain</button>
+    <div class="summary-box">
+      <h3>📄 Summary Preview:</h3>
+      <pre id="summaryContent">Click 'Load Summary' to view results...</pre>
+    </div>
 
-  <pre id="summaryBox" style="white-space: pre-wrap; background: #f0f0f0; padding: 10px; border-radius: 5px;"></pre>
+    <footer>
+      Made with ❤️ by Harshit Saxena | <a href="https://github.com/harshitsaxenaa/sarcasm-hive" target="_blank">GitHub Repo</a>
+    </footer>
+  </div>
 
-  <!-- ✅ Script at the end -->
   <script src="post_to_hive.js"></script>
 </body>
 </html>
