@@ -1,0 +1,4 @@
+Model Accuracy: 95.78%
+Sarcastic Sentences Detected: 1384
+Non-Sarcastic Sentences: 725
+Example IDs of Sarcastic Sentences: [12315, 10204, 11532]
