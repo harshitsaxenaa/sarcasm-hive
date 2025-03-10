@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <title>Post Your Sarcasm Detection Results to Hive</title>
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <div class="container">
@@ -20,12 +20,27 @@
     <pre id="summaryBox">Click "Load Summary" to display results...</pre>
 
     <footer>
-      Made with ❤️ by Harshit | 
+      Made with ❤️ by Harshit |
       <a href="https://github.com/harshitsaxenaa/sarcasm-hive" target="_blank">GitHub Repo</a>
     </footer>
   </div>
 
-  <!-- ✅ Script at the end -->
   <script src="post_to_hive.js"></script>
+  <script>
+    // Animate the Post button
+    const postBtn = document.getElementById('postToHiveBtn');
+
+    postBtn.addEventListener('click', () => {
+      postBtn.disabled = true;
+      const originalText = postBtn.textContent;
+      postBtn.innerHTML = '⏳ Posting...';
+
+      // Revert back after 4 seconds (adjust as needed based on actual post logic)
+      setTimeout(() => {
+        postBtn.innerHTML = originalText;
+        postBtn.disabled = false;
+      }, 4000);
+    });
+  </script>
 </body>
 </html>
